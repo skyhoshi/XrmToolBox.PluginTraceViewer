@@ -1,7 +1,9 @@
 ﻿namespace Cinteros.XTB.PluginTraceViewer
 {
+    using System;
     using System.ComponentModel.Composition;
     using System.Linq;
+    using XrmToolBox.Constants;
     using XrmToolBox.Extensibility;
     using XrmToolBox.Extensibility.Interfaces;
 
@@ -36,5 +38,7 @@
                 .FirstOrDefault(a => a.Name == "SmallImageBase64")?.Value as string);
             return tool;
         }
+
+        public override Guid GetId() => XrmToolBoxToolIds.PluginTraceViewer;
     }
 }

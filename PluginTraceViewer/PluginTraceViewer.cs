@@ -26,7 +26,7 @@ using XrmToolBox.Extensibility.Interfaces;
 
 namespace Cinteros.XTB.PluginTraceViewer
 {
-    public partial class PluginTraceViewer : RappXTBControlBase, IMessageBusHost, IHelpPlugin, IStatusBarMessenger, IShortcutReceiver, IAboutPlugin
+    public partial class PluginTraceViewer : RappPluginControlBase, IMessageBusHost, IHelpPlugin, IStatusBarMessenger, IShortcutReceiver, IAboutPlugin
     {
         internal GridControl gridControl;
         internal FilterControl filterControl;
@@ -283,24 +283,22 @@ namespace Cinteros.XTB.PluginTraceViewer
             tslAbout_Click(null, null);
         }
 
-        public override void HandleToastActivation(ToastNotificationActivatedEventArgsCompat args)
+        public override bool HandleToastActivationInternal(string action, string sender, ToastArguments args)
         {
-            if (Supporting.HandleToastActivation(this, args, AppInsights))
+            if (action == "default")
             {
-                return;
-            }
-            var arguments = ToastArguments.Parse(args.Argument);
-            if (arguments.TryGetValue("action", out var action) && action == "default")
-            {
-                this.BringToolToFront(gridControl.crmGridView);
-                if (buttonRefreshLogs.Visible && buttonRefreshLogs.Enabled)
+                if (!sender.Contains("Excel"))
                 {
-                    RefreshNewTraces(true);
-                    justtoasted = false;
+                    this.BringToolToFront(gridControl.crmGridView);
+                    if (buttonRefreshLogs.Visible && buttonRefreshLogs.Enabled)
+                    {
+                        RefreshNewTraces(true);
+                        justtoasted = false;
+                    }
+                    return true;
                 }
-                return;
             }
-            base.HandleToastActivation(args);
+            return false;
         }
 
         internal void UpdateHighlighting()
