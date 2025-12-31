@@ -662,6 +662,7 @@ namespace Cinteros.XTB.PluginTraceViewer.Controls
                 Text = txtQuickFilter.Text,
                 Columns = string.Join(",", cols),
                 And = mnuQFCombAnd.Checked,
+                Cases = mnuQFAdvCases.Checked,
                 Not = mnuQFAdvNot.Checked,
                 RegEx = mnuQFAdvRegEx.Checked
             };

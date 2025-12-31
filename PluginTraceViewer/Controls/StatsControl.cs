@@ -1,5 +1,6 @@
 ﻿using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
+using Rappen.XTB.Helpers.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Drawing;

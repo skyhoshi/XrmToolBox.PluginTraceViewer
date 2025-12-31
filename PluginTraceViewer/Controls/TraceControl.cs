@@ -2,6 +2,7 @@
 using Microsoft.Xrm.Sdk;
 using Rappen.XRM.Helpers.Extensions;
 using Rappen.XTB.Helpers;
+using Rappen.XTB.Helpers.Extensions;
 using System;
 using System.Drawing;
 using System.Linq;
@@ -99,11 +100,11 @@ namespace Cinteros.XTB.PluginTraceViewer.Controls
             }
             if (!string.IsNullOrWhiteSpace(freefilter))
             {
-                textMessage.HighlightFilter(freefilter, Color.White, Color.Red);
+                textMessage.HighlightFilter(freefilter, ptv.gridControl.crmGridView.Filtering.Cases, Color.White, Color.Red);
             }
             if (!string.IsNullOrWhiteSpace(quickfilter))
             {
-                textMessage.HighlightFilter(quickfilter, Color.Red, Color.White);
+                textMessage.HighlightFilter(quickfilter, ptv.gridControl.crmGridView.Filtering.Cases, Color.Red, Color.White);
             }
             textMessage.Select(0, 0);
         }

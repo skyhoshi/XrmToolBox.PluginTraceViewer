@@ -6,6 +6,7 @@ using Microsoft.Crm.Sdk.Messages;
 using Microsoft.Toolkit.Uwp.Notifications;
 using Microsoft.Xrm.Sdk;
 using Microsoft.Xrm.Sdk.Query;
+using Rappen.XRM.Helpers.Extensions;
 using Rappen.XRM.Helpers.Serialization;
 using Rappen.XTB;
 using Rappen.XTB.Helpers;

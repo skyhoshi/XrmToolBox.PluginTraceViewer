@@ -1,4 +1,5 @@
-﻿using System.Drawing;
+﻿using Rappen.XTB.Helpers.Extensions;
+using System.Drawing;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -74,11 +75,11 @@ namespace Cinteros.XTB.PluginTraceViewer.Controls
             }
             if (!string.IsNullOrWhiteSpace(freefilter))
             {
-                textException.HighlightFilter(freefilter, Color.White, Color.Red);
+                textException.HighlightFilter(freefilter, ptv.gridControl.crmGridView.Filtering.Cases, Color.White, Color.Red);
             }
             if (!string.IsNullOrWhiteSpace(quickfilter))
             {
-                textException.HighlightFilter(quickfilter, Color.Red, Color.White);
+                textException.HighlightFilter(quickfilter, ptv.gridControl.crmGridView.Filtering.Cases, Color.Red, Color.White);
             }
             textException.Select(0, 0);
         }
