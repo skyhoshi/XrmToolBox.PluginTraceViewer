@@ -7,25 +7,33 @@
     <authors>Jonas Rapp</authors>
     <owners>rappen</owners>
     <projectUrl>https://jonasr.app/PTV</projectUrl>
-    <iconUrl>https://jonasr.app/wp-content/uploads/PTV-150-tsp.png</iconUrl>
+    <iconUrl>https://rappen.github.io/Tools/Images/PTV150.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Investigate the Plugin Trace Log and finding records with easy filtering and display possibilities</description>
     <summary>Investigate the Plugin Trace Log and finding records with easy filtering and display possibilities</summary>
     <releaseNotes>
-* ComboBox with CheckBoxes (select multiple items)
-* Advanced Quick Filter (fields, or/and,not, regex...)
-* Quick Filter matches are highlighted (easier to see what you are looking for)
-* Free Filtering before retrieving (retrieve only relevant trace log records)
-* Filtering more granular (MainOperation, min/max duration, help links)
-* Improved identifying records from the trace log message
+Export to Excel functionality added!
+  - Either includes all visible columns or everything, also with Trace Details and Exception details.
+
+Filtering on-the-fly
+  - Open filtering text blox with CTRL+SHIFT+F
+  - Now also has Match Cases option
+  - Minor bug fixes
+
+Possible to call PTV from other tools and filter automatically by Message.
+Thanks @drivardxrm for your PR!
+
+Using Windows App Notifications (Toasts) to let you know when new traces
+are added and informing you how to support my tool for the creator, still
+maintaining and improving this tool after 10 years, new less intrusive!
 
 Read latest release notes!
 https://jonasr.app/ptv/releases/#$versionnumber$
     </releaseNotes>
-    <copyright>Copyright 2016-2025 Jonas Rapp</copyright>
+    <copyright>Copyright 2016-2026 Jonas Rapp</copyright>
     <tags>XrmToolBox Plugins PluginTraceViewer</tags>
     <dependencies>
-      <dependency id="XrmToolBox" version="1.2023.10.67" />
+      <dependency id="XrmToolBox" version="1.2025.10.74" />
     </dependencies>
   </metadata>
   <files>
