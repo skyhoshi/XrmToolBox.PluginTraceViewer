@@ -303,8 +303,8 @@ namespace Cinteros.XTB.PluginTraceViewer
 
         internal void UpdateHighlighting()
         {
-            traceControl?.ShowMessageTextAsync(tsmiHighlightGuids.Checked, tsmiIdentifyRecords.Checked, null, filterControl.FreeTextFilter(), gridControl.crmGridView.Filtering.Text);
-            exceptionControl?.ShowMessageTextAsync(tsmiHighlightGuids.Checked, tsmiIdentifyRecords.Checked, filterControl.FreeTextFilter(), gridControl.crmGridView.Filtering.Text);
+            _ = traceControl?.ShowMessageTextAsync(tsmiHighlightGuids.Checked, tsmiIdentifyRecords.Checked, null, filterControl.FreeTextFilter(), gridControl.crmGridView.Filtering.Text);
+            _ = exceptionControl?.ShowMessageTextAsync(tsmiHighlightGuids.Checked, tsmiIdentifyRecords.Checked, filterControl.FreeTextFilter(), gridControl.crmGridView.Filtering.Text);
         }
 
         private void tslAbout_Click(object sender, EventArgs e)
