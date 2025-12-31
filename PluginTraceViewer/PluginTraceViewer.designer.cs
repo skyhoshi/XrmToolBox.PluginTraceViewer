@@ -310,7 +310,7 @@
             this.tsmiExcelMore});
             this.tsmiExcel.Image = ((System.Drawing.Image)(resources.GetObject("tsmiExcel.Image")));
             this.tsmiExcel.Name = "tsmiExcel";
-            this.tsmiExcel.Size = new System.Drawing.Size(253, 22);
+            this.tsmiExcel.Size = new System.Drawing.Size(269, 38);
             this.tsmiExcel.Text = "Export to Excel";
             // 
             // tsmiExcelLess
@@ -330,15 +330,16 @@
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(250, 6);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(266, 6);
             // 
             // tsmiViewQuickFilter
             // 
             this.tsmiViewQuickFilter.CheckOnClick = true;
             this.tsmiViewQuickFilter.Image = ((System.Drawing.Image)(resources.GetObject("tsmiViewQuickFilter.Image")));
             this.tsmiViewQuickFilter.Name = "tsmiViewQuickFilter";
-            this.tsmiViewQuickFilter.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.tsmiViewQuickFilter.Size = new System.Drawing.Size(253, 22);
+            this.tsmiViewQuickFilter.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.F)));
+            this.tsmiViewQuickFilter.Size = new System.Drawing.Size(269, 38);
             this.tsmiViewQuickFilter.Text = "Quick Filter";
             this.tsmiViewQuickFilter.Click += new System.EventHandler(this.tsmiViewQuickFilter_Click);
             // 
@@ -347,21 +348,21 @@
             this.tsmiLocalTimes.CheckOnClick = true;
             this.tsmiLocalTimes.Image = ((System.Drawing.Image)(resources.GetObject("tsmiLocalTimes.Image")));
             this.tsmiLocalTimes.Name = "tsmiLocalTimes";
-            this.tsmiLocalTimes.Size = new System.Drawing.Size(253, 22);
+            this.tsmiLocalTimes.Size = new System.Drawing.Size(269, 38);
             this.tsmiLocalTimes.Text = "Local Times";
             this.tsmiLocalTimes.Click += new System.EventHandler(this.tsmiLocalTimes_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(250, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(266, 6);
             // 
             // tsmiFullyQualifiedPluginNames
             // 
             this.tsmiFullyQualifiedPluginNames.CheckOnClick = true;
             this.tsmiFullyQualifiedPluginNames.Image = ((System.Drawing.Image)(resources.GetObject("tsmiFullyQualifiedPluginNames.Image")));
             this.tsmiFullyQualifiedPluginNames.Name = "tsmiFullyQualifiedPluginNames";
-            this.tsmiFullyQualifiedPluginNames.Size = new System.Drawing.Size(253, 22);
+            this.tsmiFullyQualifiedPluginNames.Size = new System.Drawing.Size(269, 38);
             this.tsmiFullyQualifiedPluginNames.Text = "Show fully qualified Plugin names";
             this.tsmiFullyQualifiedPluginNames.Click += new System.EventHandler(this.tsmiFullyQualifiedPluginNames_Click);
             // 
@@ -370,7 +371,7 @@
             this.tsmiHidePluginFromStep.CheckOnClick = true;
             this.tsmiHidePluginFromStep.Image = ((System.Drawing.Image)(resources.GetObject("tsmiHidePluginFromStep.Image")));
             this.tsmiHidePluginFromStep.Name = "tsmiHidePluginFromStep";
-            this.tsmiHidePluginFromStep.Size = new System.Drawing.Size(253, 22);
+            this.tsmiHidePluginFromStep.Size = new System.Drawing.Size(269, 38);
             this.tsmiHidePluginFromStep.Text = "Hide Plugin names from Steps";
             this.tsmiHidePluginFromStep.Click += new System.EventHandler(this.tsmiHidePluginFromStep_Click);
             // 
@@ -379,14 +380,14 @@
             this.tsmiHideEntityFromStep.CheckOnClick = true;
             this.tsmiHideEntityFromStep.Image = ((System.Drawing.Image)(resources.GetObject("tsmiHideEntityFromStep.Image")));
             this.tsmiHideEntityFromStep.Name = "tsmiHideEntityFromStep";
-            this.tsmiHideEntityFromStep.Size = new System.Drawing.Size(253, 22);
+            this.tsmiHideEntityFromStep.Size = new System.Drawing.Size(269, 38);
             this.tsmiHideEntityFromStep.Text = "Hide Entity names from Steps";
             this.tsmiHideEntityFromStep.Click += new System.EventHandler(this.tsmiHideEntityFromStep_Click);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(250, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(266, 6);
             // 
             // tsmiHighlight
             // 
@@ -395,20 +396,20 @@
             this.tsmiHighlight.CheckState = System.Windows.Forms.CheckState.Checked;
             this.tsmiHighlight.Image = ((System.Drawing.Image)(resources.GetObject("tsmiHighlight.Image")));
             this.tsmiHighlight.Name = "tsmiHighlight";
-            this.tsmiHighlight.Size = new System.Drawing.Size(253, 22);
+            this.tsmiHighlight.Size = new System.Drawing.Size(269, 38);
             this.tsmiHighlight.Text = "Highlight identical cells";
             this.tsmiHighlight.Click += new System.EventHandler(this.tsmiHighlight_Click);
             // 
             // toolStripMenuItem6
             // 
             this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(250, 6);
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(266, 6);
             // 
             // tsmiResetColumns
             // 
             this.tsmiResetColumns.Image = ((System.Drawing.Image)(resources.GetObject("tsmiResetColumns.Image")));
             this.tsmiResetColumns.Name = "tsmiResetColumns";
-            this.tsmiResetColumns.Size = new System.Drawing.Size(253, 22);
+            this.tsmiResetColumns.Size = new System.Drawing.Size(269, 38);
             this.tsmiResetColumns.Text = "Reset all columns";
             this.tsmiResetColumns.Click += new System.EventHandler(this.tsmiResetColumns_Click);
             // 

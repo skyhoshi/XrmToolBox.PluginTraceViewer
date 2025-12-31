@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Rappen.XTB.Helpers;
 using System.Windows.Forms;
 
 namespace Cinteros.XTB.PluginTraceViewer
@@ -16,8 +12,8 @@ namespace Cinteros.XTB.PluginTraceViewer
             if (e.KeyCode == Keys.F && e.Modifiers == Keys.Control)
             {
                 findHandled = true;
-                result = Prompt.ShowDialog("Enter text to find", "Find text", result);
-                if (!string.IsNullOrWhiteSpace(result))
+                if (ControlUtils.PromptDialog("Enter text to find", "Find text", false, ref result) == DialogResult.OK &&
+                    !string.IsNullOrWhiteSpace(result))
                 {
                     FindTheText(textBox, result, 0);
                 }
@@ -37,19 +33,19 @@ namespace Cinteros.XTB.PluginTraceViewer
 
         private static int FindTheText(RichTextBox textBox, string text, int start)
         {
-            // Initialize the return value to false by default. 
+            // Initialize the return value to false by default.
             int returnValue = -1;
 
-            // Ensure that a search string has been specified and a valid start point. 
+            // Ensure that a search string has been specified and a valid start point.
             if (text.Length > 0 && start >= 0)
             {
                 if (!textBox.Focused)
                 {
                     textBox.Focus();
                 }
-                // Obtain the location of the search string in richTextBox1. 
+                // Obtain the location of the search string in richTextBox1.
                 int indexToText = textBox.Find(text, start, RichTextBoxFinds.None);
-                // Determine whether the text was found in richTextBox1. 
+                // Determine whether the text was found in richTextBox1.
                 if (indexToText >= 0)
                 {
                     returnValue = indexToText;
@@ -68,6 +64,5 @@ namespace Cinteros.XTB.PluginTraceViewer
             }
             return returnValue;
         }
-
     }
 }
