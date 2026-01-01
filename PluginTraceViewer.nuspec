@@ -16,18 +16,16 @@ Export to Excel functionality added!
   - Either includes all visible columns or everything, also with Trace Details and Exception details.
 
 Filtering on-the-fly
-  - Open filtering text blox with CTRL+SHIFT+F
-  - Now also has Match Cases option
+  - Open filtering text box with CTRL+SHIFT+F
+  - Now also has the Match Cases option
   - Minor bug fixes
 
 Possible to call PTV from other tools and filter automatically by Message.
 Thanks @drivardxrm for your PR!
 
-Using Windows App Notifications (Toasts) to let you know when new traces
-are added and informing you how to support my tool for the creator, still
-maintaining and improving this tool after 10 years, new less intrusive!
+Using Windows App Notifications (Toasts) to let you know when new traces are added and informing you how to support my tool for the creator, still maintaining and improving this tool after 10 years, new, less intrusive!
 
-Read latest release notes!
+Read the latest release notes!
 https://jonasr.app/ptv/releases/#$versionnumber$
     </releaseNotes>
     <copyright>Copyright 2016-2026 Jonas Rapp</copyright>
