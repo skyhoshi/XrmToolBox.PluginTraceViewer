@@ -100,12 +100,12 @@ namespace Cinteros.XTB.PluginTraceViewer
                     break;
 
                 default:
-                    EntityName = guidrelated;
-                    if (EntityName.ToLowerInvariant().StartsWith("object") && EntityName.ToLowerInvariant().EndsWith("id"))
+                    EntityName = guidrelated.ToLowerInvariant();
+                    if (EntityName.StartsWith("object") && EntityName.ToLowerInvariant().EndsWith("id"))
                     {
                         EntityName = EntityName.Substring(6, EntityName.Length - 8);
                     }
-                    if (EntityName.ToLowerInvariant().EndsWith("id"))
+                    if (EntityName.EndsWith("id"))
                     {
                         EntityName = EntityName.Substring(0, EntityName.Length - 2);
                     }
@@ -127,7 +127,7 @@ namespace Cinteros.XTB.PluginTraceViewer
     public class Links : List<Link>
     {
         private const string guidregex = @"([a-z0-9]{8}[-][a-z0-9]{4}[-][a-z0-9]{4}[-][a-z0-9]{4}[-][a-z0-9]{12})";
-        private static char[] spacechars = { ' ', '\t', '\n', '\r', ':', '.', ',', '=', '"', '\'', '(', ')', '[', ']' };
+        private static char[] spacechars = { ' ', '\t', '\n', '\r', ':', '.', ',', '=', '"', '\'', '(', ')', '[', ']', '-' };
         private static char[] separators = { ';', ':', '(', ')', '[', ']', '{', '}', '<', '>', '/', '|', '^', '"', '\'', '\\', '/', '`' };
         private static string[] wordsbetweenstableandguid = { "new guid", "system.guid", "guid", ", id", "with id", "of entity", "context.primaryentityid" };
         private string log;
